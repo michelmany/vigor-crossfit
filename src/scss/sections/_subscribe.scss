@@ -1,0 +1,75 @@
+.subscribe {
+  background-color: $main-color;
+  min-height: 40.8rem;
+  padding-top: 8.4rem;
+  padding-bottom: 5rem;
+  text-align: center;
+
+  &__headline {
+    margin-bottom: 22px;
+  }
+
+  &__subline {
+    @extend %font-medium;
+    font-size: 2rem;
+    color: $black;
+    text-align: center;
+    line-height: 3.6rem;
+  }
+
+  &__form {
+    display: flex;
+    margin: 5rem auto 2rem;
+    max-width: 74.6rem;
+
+    &-input {
+      -ms-transform: skewX(-10deg);
+      -webkit-transform: skewX(-10deg);
+      transform: skewX(-10deg);
+      border: 0;
+      height: 6rem;
+      background-color: $white;
+      width: 45rem;
+      outline: none;
+
+      input {
+        @extend %font-regular;
+        font-size: 2rem;
+        color: $black;
+        background-color: transparent;
+        -ms-transform: skewX(10deg);
+        -webkit-transform: skewX(10deg);
+        transform: skewX(10deg);
+        padding: 0.3rem 3.4rem 0.6rem;
+
+        @include placeholder {
+          @extend %font-regular;
+          font-size: 2rem;
+          color: $black;
+        }
+      }
+    }
+
+    &-submit {
+      width: 100%;
+      margin-left: 1.6rem;
+
+      button {
+        color: $black;
+        width: 100%;
+        &:before {
+          border-color: $white;
+        }
+      }
+    }
+  }
+
+  &__bottom-copy {
+    @extend %font-regular;
+    font-size: 1.2rem;
+    color: $black;
+    text-align: center;
+    line-height: 2.4rem;
+    margin-bottom: 0;
+  }
+}

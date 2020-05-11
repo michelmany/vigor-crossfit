@@ -46,7 +46,7 @@
                 <div class="coaches-slider__slides-item">
                     <h3 class="slides-item__title">Ali Douhani</h3>
                     <p class="slides-item__copy">2018 Olympic weightlifting champion,<br/>
-                        2016 Crossfit Games finalist,  2013 Crossfit Games  - 2nd place</p>
+                        2016 Crossfit Games finalist, 2013 Crossfit Games - 2nd place</p>
                 </div>
             </div>
 
@@ -119,22 +119,45 @@
 
     <section class="products">
         <div class="container">
-            <div class="products__content">
-                <h2 class="products__headline">Share the passion</h2>
-                <p>Support the movement by wearing the toughest gear in the wild.</p>
-                <p>Represent the chapter and yourself in our latest selected gear.</p>
-                <button class="btn btn-link">Browse our shop</button>
-            </div>
-            <div class="products__items">
-                <div class="product">
-                    <div class="product__title">Cross Shorts WMNS</div>
-                    <div class="product__price">$25.95</div>
-                    <button class="btn btn-sm product__cta">Buy now</button>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="products__content">
+                        <h2 class="products__headline">Share the passion</h2>
+                        <div class="products__copy">
+                            <p>Support the movement by wearing the toughest gear in the wild.<br/>
+                                Represent the chapter and yourself in our latest selected gear.</p>
+                        </div>
+                        <div class="products__cta">
+                            <button class="btn btn-link">Browse our shop</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="product">
-                    <div class="product__title">Lift Heavier t-shirt</div>
-                    <div class="product__price">$19.95</div>
-                    <button class="btn btn-sm product__cta">Buy now</button>
+                <div class="col-lg-8">
+                    <div class="products__items">
+                        <div class="product">
+                            <div class="product__header">
+                                <div>
+                                    <p class="product__header-title">Cross Shorts WMNS</p>
+                                    <p class="product__header-price">$25.95</p>
+                                </div>
+                                <div class="product__add-to-cart">
+                                    <button class="btn btn-primary btn-sm">Buy now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <div class="product__header">
+                                <div>
+                                    <p class="product__header-title">Lift Heavier t-shirt</p>
+                                    <p class="product__header-price">$19.95</p>
+                                </div>
+                                <div class="product__add-to-cart">
+                                    <button class="btn btn-primary btn-sm">Buy now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -143,16 +166,19 @@
     <section class="subscribe">
         <div class="container">
             <h2 class="subscribe__headline">Subscribe to our newsletter</h2>
-            <h5 class="subscribe__subline">and get $20 off your new membership or your next order in our store.</h5>
+            <h4 class="subscribe__subline">and get $20 off your new membership or your next order in our store.</h4>
 
             <div class="subscribe__form">
-                <input type="email" class="subscribe__form-input">
-                <button type="submit">Subscribe</button>
-                <p>We dont spam. I mean… Spam is in a can. Why would we put your email in a can?</p>
+                <div class="subscribe__form-input">
+                    <input type="email" class="subscribe__form-input" placeholder="Your email address" value="name@email.com"/>
+                </div>
+                <div class="subscribe__form-submit">
+                    <button class="btn btn-outline-primary btn-lg" type="submit">Subscribe</button>
+                </div>
             </div>
+            <p class="subscribe__bottom-copy">We dont spam. I mean… Spam is in a can. Why would we put your email in a can?</p>
         </div>
     </section>
-
 {% endblock %}
 
 {% block javascripts %}

@@ -1,0 +1,52 @@
+.products {
+  padding-top: 9.5rem;
+  padding-bottom: 9.5rem;
+
+  &__headline {
+    margin-bottom: 5rem;
+  }
+
+  &__cta {
+    margin-top: 40px;
+  }
+
+  &__items {
+    @media (min-width: 992px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .product {
+      background: $black;
+      width: 39.6rem;
+      height: 39.6rem;
+      position: relative;
+
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 3.2rem 3rem 3.2rem 2rem;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+
+        &-title {
+          color: $white;
+          @extend %font-medium;
+          font-size: 2rem;
+          line-height: 100%;
+          margin-bottom: 0.8rem;
+        }
+
+        &-price {
+          color: $white;
+          @extend %font-bold;
+          font-size: 1.6rem;
+          line-height: 100%;
+          margin-bottom: 1rem;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -47,9 +47,8 @@ h2 {
 }
 
 p {
-  color: $black;
-  font-size: 1em;
-  letter-spacing: 0;
-  line-height: 23px;
   @extend %font-regular;
+  font-size: 2rem;
+  color: $black;
+  line-height: 3.6rem;
 }

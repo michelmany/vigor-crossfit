@@ -55,9 +55,14 @@
   font-style: italic;
 }
 
+.subscribe__bottom-copy,
+.subscribe__form-input input:-ms-input-placeholder,
+.subscribe__form-input input::-moz-placeholder,
+.subscribe__form-input input:-moz-placeholder,
+.subscribe__form-input input::-webkit-input-placeholder,
+.subscribe__form-input input,
 .our-plans__boxes .boxes__item ul li,
 .coaches-slider__slides .slides-item__copy,
-.intro-section__copy p,
 p,
 body {
   font-family: "IBM Plex Sans", sans-serif;
@@ -65,6 +70,8 @@ body {
   font-style: normal;
 }
 
+.subscribe__subline,
+.products__items .product__header-title,
 .coaches-slider__header-subline {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;
@@ -83,6 +90,7 @@ body {
 .btn-link,
 .btn-outline-primary,
 .btn-primary,
+.products__items .product__header-price,
 .coaches-slider__slides .slides-item__title,
 h1 {
   font-family: "IBM Plex Sans", sans-serif;
@@ -144,10 +152,9 @@ h2 {
 }
 
 p {
+  font-size: 2rem;
   color: #000000;
-  font-size: 1em;
-  letter-spacing: 0;
-  line-height: 23px;
+  line-height: 3.6rem;
 }
 
 .container {
@@ -214,7 +221,7 @@ p {
   bottom: -4px;
   left: 0;
   height: 0.2rem;
-  background-color: #ffd100;
+  background-color: #ffffff;
   width: 0;
 }
 
@@ -302,9 +309,6 @@ p {
 }
 
 .intro-section__copy p {
-  font-size: 2rem;
-  color: #000000;
-  line-height: 3.6rem;
   margin-bottom: 5rem;
 }
 
@@ -471,6 +475,141 @@ p {
   line-height: 3.6rem;
 }
 
+.products {
+  padding-top: 9.5rem;
+  padding-bottom: 9.5rem;
+}
+
+.products__headline {
+  margin-bottom: 5rem;
+}
+
+.products__cta {
+  margin-top: 40px;
+}
+
+@media (min-width: 992px) {
+  .products__items {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.products__items .product {
+  background: #000000;
+  width: 39.6rem;
+  height: 39.6rem;
+  position: relative;
+}
+
+.products__items .product__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 3.2rem 3rem 3.2rem 2rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.products__items .product__header-title {
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.products__items .product__header-price {
+  color: #ffffff;
+  font-size: 1.6rem;
+  line-height: 100%;
+  margin-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+.subscribe {
+  background-color: #ffd100;
+  min-height: 40.8rem;
+  padding-top: 8.4rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+.subscribe__headline {
+  margin-bottom: 22px;
+}
+
+.subscribe__subline {
+  font-size: 2rem;
+  color: #000000;
+  text-align: center;
+  line-height: 3.6rem;
+}
+
+.subscribe__form {
+  display: flex;
+  margin: 5rem auto 2rem;
+  max-width: 74.6rem;
+}
+
+.subscribe__form-input {
+  transform: skewX(-10deg);
+  border: 0;
+  height: 6rem;
+  background-color: #ffffff;
+  width: 45rem;
+  outline: none;
+}
+
+.subscribe__form-input input {
+  font-size: 2rem;
+  color: #000000;
+  background-color: transparent;
+  transform: skewX(10deg);
+  padding: 0.3rem 3.4rem 0.6rem;
+}
+
+.subscribe__form-input input::-webkit-input-placeholder {
+  font-size: 2rem;
+  color: #000000;
+}
+
+.subscribe__form-input input:-moz-placeholder {
+  font-size: 2rem;
+  color: #000000;
+}
+
+.subscribe__form-input input::-moz-placeholder {
+  font-size: 2rem;
+  color: #000000;
+}
+
+.subscribe__form-input input:-ms-input-placeholder {
+  font-size: 2rem;
+  color: #000000;
+}
+
+.subscribe__form-submit {
+  width: 100%;
+  margin-left: 1.6rem;
+}
+
+.subscribe__form-submit button {
+  color: #000000;
+  width: 100%;
+}
+
+.subscribe__form-submit button:before {
+  border-color: #ffffff;
+}
+
+.subscribe__bottom-copy {
+  font-size: 1.2rem;
+  color: #000000;
+  text-align: center;
+  line-height: 2.4rem;
+  margin-bottom: 0;
+}
+
 .btn-primary {
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -585,7 +724,7 @@ p {
   transition: 0.4s;
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -4px;
   left: 0;
   height: 0.2rem;
   background-color: #ffd100;
