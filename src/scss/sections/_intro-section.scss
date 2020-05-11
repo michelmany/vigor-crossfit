@@ -1,15 +1,27 @@
 .intro-section {
-  padding-top: 16.6rem;
-  padding-bottom: 16.6rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+
+  @media (min-width: 992px) {
+    padding-top: 16.6rem;
+    padding-bottom: 15.6rem;
+  }
 
   &__headline {
-    max-width: 459px;
+    max-width: 46rem;
+    position: relative;
+    top: 1rem;
   }
 
   &__copy {
-    max-width: 47.3rem;
+    max-width: 47.6rem;
+    @media (min-width: 992px) {
+      left: -0.5rem;
+      position: relative;
+    }
+
     p {
-      margin-bottom: 5rem;
+      margin-bottom: 3.8rem;
       &:last-of-type {
         margin-bottom: 0;
       }

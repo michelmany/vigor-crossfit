@@ -1,8 +1,7 @@
 .our-plans {
   background: $white;
-  min-height: 86.4rem;
   padding-top: 8.4rem;
-  padding-bottom: 9.6rem;
+  padding-bottom: 8.4rem;
 
   &__headline {
     margin-bottom: 8.4rem;
@@ -43,7 +42,12 @@
         }
       }
 
-      button.btn {
+      &-cta {
+        button {
+          position: relative;
+          left: 1rem;
+          text-transform: capitalize;
+        }
       }
 
       &--featured {
@@ -60,6 +64,23 @@
 
         .boxes__item-title {
           margin-bottom: 5.2rem;
+        }
+      }
+
+      &--beginner {
+        .boxes__item-cta {
+          button {
+            left: 0.5rem;
+          }
+        }
+      }
+
+      &--competitive {
+        .boxes__item-cta {
+          button {
+            text-transform: uppercase;
+            left: 1rem;
+          }
         }
       }
     }

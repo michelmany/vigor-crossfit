@@ -33,11 +33,11 @@
   }
 
   &__slides {
-    text-align: center;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 11.4rem;
-    position: absolute;
+    bottom: 10.5rem;
+    text-align: center;
 
     .slides-item {
       &__title {

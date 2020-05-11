@@ -19,7 +19,22 @@
     }
   }
 
+  &.btn-md {
+    padding: 1.6rem 6.4rem;
+    &:before {
+      max-width: 23rem;
+    }
+  }
+
+  &.btn-sm {
+    padding: 2.2rem 6.4rem;
+    &:before {
+      max-width: 29.2rem;
+    }
+  }
+
   &:before {
+    transition: 0.2s;
     content: "";
     position: absolute;
     z-index: -1;
