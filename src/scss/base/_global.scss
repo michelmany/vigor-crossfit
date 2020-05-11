@@ -1,0 +1,55 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $font-family-sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $black;
+  background: $white;
+  overflow-x: hidden;
+  @extend %font-regular;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+a,
+.btn-link {
+  color: $black;
+  &:hover {
+    color: inherit;
+  }
+}
+
+h1 {
+  color: $black;
+  font-size: 2.8em;
+  letter-spacing: 0;
+  line-height: 55px;
+  @extend %font-bold;
+}
+
+h2 {
+  color: $black;
+  font-size: 5.9rem;
+  letter-spacing: 0;
+  line-height: 36px;
+  @extend %font-bold-italic;
+
+  letter-spacing: -2.95px;
+  line-height: 6rem;
+}
+
+p {
+  color: $black;
+  font-size: 1em;
+  letter-spacing: 0;
+  line-height: 23px;
+  @extend %font-regular;
+}

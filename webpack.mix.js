@@ -1,20 +1,21 @@
 let mix = require("laravel-mix");
 
 let config = {
-  base_url: "yourlocalurl.local",
-  watchFiles: ["src/*.*", "src/**/*.*", "dist/*.css"],
+  base_url: "vigor.local",
+  watchFiles: ["dist/**/*.js", "dist/**/*.css", "dist/**/*.twig"],
 };
 
 mix
   .setPublicPath("dist/")
   .js("src/twig.js", "dist/")
   .js("src/js/app.js", "dist/js/")
-  .sass("src/sass/app.sass", "dist/css/")
+  .sass("src/scss/app.scss", "dist/css/")
 
   .browserSync({
     proxy: config.base_url,
     files: config.watchFiles,
     injectChanges: true,
+    reload: false,
   })
 
   .webpackConfig((webpack) => {

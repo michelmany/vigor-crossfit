@@ -1,0 +1,61 @@
+.navbar {
+  height: 9.6rem;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 0;
+
+  &__brand {
+    position: relative;
+    top: -6px;
+    left: 2px;
+    img {
+      width: 11.9rem;
+    }
+  }
+
+  &__menu {
+    color: $white;
+    @extend %font-semibold;
+    font-size: 1.6rem;
+    color: $white;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    position: relative;
+    top: 0.5rem;
+
+    li {
+      position: relative;
+
+      a {
+        color: $white;
+        padding: 2rem 1.5rem;
+
+        &:before {
+          transition: 0.4s;
+          content: "";
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          height: 0.2rem;
+          background-color: $main-color;
+          width: 0;
+        }
+
+        &:hover,
+        &:active,
+        &.active,
+        &:focus {
+          color: $white;
+          text-decoration: none;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

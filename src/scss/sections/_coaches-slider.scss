@@ -1,0 +1,61 @@
+.coaches-slider {
+  background: #191a1b center / cover no-repeat;
+  min-height: 73.2rem;
+  position: relative;
+
+  &__header {
+    position: relative;
+    top: 4.4rem;
+
+    &-headline {
+      color: $white;
+      margin-bottom: 2.6rem;
+    }
+
+    &-subline {
+      color: $white;
+      @extend %font-medium;
+      max-width: 57.5rem;
+      font-size: 2rem;
+      color: $white;
+      text-align: center;
+      line-height: 3.6rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__cta {
+    position: absolute;
+    bottom: 6.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__slides {
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 11.4rem;
+    position: absolute;
+
+    .slides-item {
+      &__title {
+        @extend %font-bold;
+        font-size: 2rem;
+        line-height: 2.7rem;
+        color: $white;
+        text-align: center;
+        margin-bottom: 1.2rem;
+      }
+
+      &__copy {
+        @extend %font-regular;
+        font-size: 1.6rem;
+        color: $white;
+        text-align: center;
+        line-height: 2.4rem;
+      }
+    }
+  }
+}

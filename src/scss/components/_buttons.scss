@@ -1,0 +1,133 @@
+.btn-primary {
+  @extend %font-bold;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  color: $black;
+  text-align: center;
+  line-height: 100%;
+  position: relative;
+  z-index: 0;
+
+  &.btn-lg {
+    padding: 2.2rem 6.4rem;
+    &:before {
+      max-width: 29.2rem;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border: 0.2rem solid $main-color;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background: $main-color;
+    -ms-transform: skewX(-10deg);
+    -webkit-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: transparent !important;
+    outline: none;
+    color: $main-color;
+
+    &:before {
+      background: $black;
+      border: 2px solid $black;
+    }
+  }
+}
+
+.btn-outline-primary {
+  @extend %font-bold;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  color: $main-color;
+  text-align: center;
+  line-height: 100%;
+  position: relative;
+  z-index: 0;
+
+  &.btn-lg {
+    padding: 2.2rem 5.84rem;
+    &:before {
+      max-width: 29.2rem;
+    }
+  }
+
+  &:before {
+    transition: 0.2s;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border: 0.2rem solid $main-color;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background: transparent;
+    -ms-transform: skewX(-10deg);
+    -webkit-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: transparent !important;
+    color: $main-color;
+
+    &:before {
+      background: $black;
+      border: 2px solid $black;
+    }
+  }
+}
+
+.btn-link {
+  color: $main-color;
+  @extend %font-bold;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0;
+
+  &:before {
+    transition: 0.4s;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.2rem;
+    background-color: $main-color;
+    width: 0;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $main-color;
+    text-decoration: none;
+    &:before {
+      width: 100%;
+    }
+  }
+}

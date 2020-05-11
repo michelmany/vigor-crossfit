@@ -49,13 +49,13 @@ function enqueue_scripts_styles() {
       true 
     );
 
-    // wp_enqueue_script( 
-    //   'isotope-layout', 
-    //   'https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js', 
-    //   array( 'jquery' ), 
-    //   $version, 
-    //   false 
-    // );
+    wp_enqueue_script( 
+      'google-maps', 
+      'https://maps.googleapis.com/maps/api/js?key=AIzaSyBNrxG0nael-8Qf9cxb_operUdT1dA8hfg&callback=initMap', 
+      array('wpstarter-main-scripts'),
+      $version, 
+      true
+    );
 
     $translation_array = array( 'theme_path' => get_stylesheet_directory_uri() );
     wp_localize_script( 'wpstarter-main-scripts', 'theme_vars', $translation_array );
@@ -100,3 +100,13 @@ function wpstarter_stop_loading_wp_embed_and_jquery() {
 	}
 }
 add_action('init', 'wpstarter_stop_loading_wp_embed_and_jquery');
+
+
+function namespace_async_scripts( $tag, $handle ) {
+  if ( 'google-maps' !== $handle ) {
+    return $tag;
+  }
+  
+  return str_replace( ' src', ' async defer src', $tag );
+}
+add_filter( 'script_loader_tag', 'namespace_async_scripts', 10, 2 );

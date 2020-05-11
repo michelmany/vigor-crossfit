@@ -1,0 +1,22 @@
+.intro-section {
+  padding-top: 16.6rem;
+  padding-bottom: 16.6rem;
+
+  &__headline {
+    max-width: 459px;
+  }
+
+  &__copy {
+    max-width: 47.3rem;
+    p {
+      @extend %font-regular;
+      font-size: 2rem;
+      color: $black;
+      line-height: 3.6rem;
+      margin-bottom: 5rem;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
