@@ -34,61 +34,46 @@
 					</li>
 				</ul>
 			</nav>		
+
+			<div class="menu d-lg-none">
+				<div class="menu__trigger js-menu-trigger"><span>MENU</span></div>
+				<div class="menu__inner js-menu-inner">
+					<ul class="menu__inner-background js-menu-inner-background">
+						<li><i></i></li>
+						<li><i></i></li>
+						<li><i></i></li>
+						<li><i></i></li>
+						<li><i></i></li>
+					</ul>
+					<div class="menu__items-wrapper js-menu-items-wrapper">
+						<ul class="menu__items-list js-menu-items-list list-unstyled">
+							<li class="js-menu-item is-active">
+								<a href="{{ site.link }}">Home</a>
+							</li>
+							<li class="js-menu-item">
+								<a href="{{ site.link }}/about">About</a>
+							</li>
+							<li class="js-menu-item">
+								<a href="{{ site.link }}/programs">Programs</a>
+							</li>
+							<li class="js-menu-item">
+								<a href="{{ site.link }}/careers">Careers</a>
+							</li>
+							<li class="js-menu-item">
+								<a href="{{ site.link }}/contact">Contact</a>
+							</li>
+							<li class="js-menu-item">
+								<a href="{{ site.link }}/blog">Blog</a>
+							</li>
+							<li class="js-menu-item">
+								<a href="{{ site.link }}/store">Store</a>
+							</li>
+						</ul>
+
+					</div>
+					<div class="menu__trigger menu__trigger--close js-menu-close"><span>Close</span></div>
+				</div>
+			</div>				
 		</div>
 	</div>
-
-<!--Menu-->
-<div class="menu d-lg-none">
-  
-  <!--Trigger-->
-  <div class="menu__trigger js-menu-trigger"><span>MENU</span></div>
-  <!--/Trigger-->
-
-  <!--Inner-->
-  <div class="menu__inner js-menu-inner">
-    <!--Inner background-->
-    <ul class="menu__inner-background js-menu-inner-background">
-      <li><i></i></li>
-      <li><i></i></li>
-      <li><i></i></li>
-      <li><i></i></li>
-      <li><i></i></li>
-    </ul>
-    <!--/Inner background-->
-
-    <div class="menu__items-wrapper js-menu-items-wrapper">
-      <ul class="menu__items-list js-menu-items-list list-unstyled">
-        <li class="js-menu-item is-active">
-          <a href="{{ site.link }}">Home</a>
-        </li>
-        <li class="js-menu-item">
-          <a href="{{ site.link }}/about">About</a>
-        </li>
-        <li class="js-menu-item">
-          <a href="{{ site.link }}/programs">Programs</a>
-        </li>
-        <li class="js-menu-item">
-          <a href="{{ site.link }}/careers">Careers</a>
-        </li>
-        <li class="js-menu-item">
-          <a href="{{ site.link }}/contact">Contact</a>
-        </li>
-        <li class="js-menu-item">
-          <a href="{{ site.link }}/blog">Blog</a>
-        </li>
-        <li class="js-menu-item">
-          <a href="{{ site.link }}/store">Store</a>
-        </li>
-      </ul>
-
-    </div>
-
-    <!--Trigger-->
-    <div class="menu__trigger menu__trigger--close js-menu-close"><span>Close</span></div>
-    <!--/Trigger-->
-  </div>
-  <!--/Inner-->
-
-</div>
-<!--/Menu-->		
 </header>

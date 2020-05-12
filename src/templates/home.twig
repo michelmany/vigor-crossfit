@@ -48,22 +48,48 @@
 			<h4 class="coaches-slider__header-subline">Team of our first class rockstar trainers, got you covered. Health plans, strenght training… you name it.</h4>
 		</div>
 
+		{% set background_01 = theme.link ~ '/src/images/1@2x.jpg' %}
+		{% set background_02 = theme.link ~ '/src/images/1-bw@2x.jpg' %}
+		{% set background_03 = theme.link ~ '/src/images/1-sepia@2x.jpg' %}
+
 		<div class="coaches-slider__slides slick-slider">
-			<div class="coaches-slider__slides-item" style="background-image: url('{{ theme.link }}/src/images/1@2x.jpg')">
+			<div class="coaches-slider__slides-item" >
+				<div class="slides-item__bg">
+					<img 
+						src="{{ background_01 }}"
+						srcset="{{ background_01|resize(896, 896) }} 480w, 
+										{{ background_01|resize(1280, 896) }} 767w, 
+										{{ background_01|resize(0, 1600) }} 1440w">
+				</div>
 				<div class="slides-item__content">
 					<h3 class="slides-item__title">Ali Douhani</h3>
 					<p class="slides-item__copy">2018 Olympic weightlifting champion,<br/>
 						2016 Crossfit Games finalist, <br class="d-md-none">2013 Crossfit Games - 2nd place</p>
 				</div>
 			</div>
-			<div class="coaches-slider__slides-item" style="background-image: url('{{ theme.link }}/src/images/1-bw@2x.jpg')">
+
+			<div class="coaches-slider__slides-item">
+				<div class="slides-item__bg">
+					<img 
+						src="{{ background_02 }}"
+						srcset="{{ background_02|resize(896, 896) }} 480w, 
+										{{ background_02|resize(1280, 896) }} 767w, 
+										{{ background_02|resize(0, 1600) }} 1440w">
+				</div>			
 				<div class="slides-item__content">
 					<h3 class="slides-item__title">Ali Douhani B&W</h3>
 					<p class="slides-item__copy">2018 Olympic weightlifting champion,<br/>
 						2016 Crossfit Games finalist, <br class="d-md-none">2013 Crossfit Games - 2nd place</p>
 				</div>
 			</div>
-			<div class="coaches-slider__slides-item" style="background-image: url('{{ theme.link }}/src/images/1-sepia@2x.jpg')">
+			<div class="coaches-slider__slides-item">
+				<div class="slides-item__bg">
+					<img 
+						src="{{ background_03 }}"
+						srcset="{{ background_03|resize(896, 896) }} 480w, 
+										{{ background_03|resize(1280, 896) }} 767w, 
+										{{ background_03|resize(0, 1600) }} 1440w">
+				</div>				
 				<div class="slides-item__content">
 					<h3 class="slides-item__title">Ali Douhani Sepia</h3>
 					<p class="slides-item__copy">2018 Olympic weightlifting champion,<br/>
@@ -183,7 +209,7 @@
 							<p>Support the movement by wearing the toughest gear in the wild.<br/>
 								Represent the chapter and yourself in our latest selected gear.</p>
 						</div>
-						<div class="products__cta d-none d-md-block">
+						<div class="products__cta d-none d-lg-block">
 							<button class="btn btn-link">Browse our shop</button>
 						</div>
 					</div>
@@ -216,7 +242,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="products__cta d-md-none">
+			<div class="products__cta d-lg-none">
 				<button class="btn btn-link">Browse our shop</button>
 			</div>
 		</div>

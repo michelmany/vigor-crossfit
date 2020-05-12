@@ -40,11 +40,25 @@
     text-align: center;
 
     &-item {
-      min-height: 73.2rem;
       background: #191a1b center / cover no-repeat;
       position: relative;
+      object-fit: cover;
+      height: 59rem;
+
+      @media (min-width: 768px) {
+        min-height: 73.2rem;
+      }
 
       .slides-item {
+        &__bg {
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
         &__content {
           position: absolute;
           left: 50%;

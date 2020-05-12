@@ -1,9 +1,8 @@
-// Slick Slider
-import "slick-carousel";
-
 /**
  * === Slick Slider ===
  */
+
+import "slick-carousel";
 
 const initSlider = function() {
   $(".slick-slider").slick({
@@ -28,22 +27,22 @@ const initSlider = function() {
  * === Hero Home ===
  */
 
-const setHeroHomeBg = function() {
-  const heroHome = $("#hero-home");
-  const heroBgMobile = heroHome.data("bgMobile");
-  const heroBgTablet = heroHome.data("bgTablet");
-  const heroBgDesktop = heroHome.data("bgDesktop");
+const setbackgroundImageByViewport = function(element) {
+  const el = $(element);
+  const bgMobile = el.data("bgMobile");
+  const bgTablet = el.data("bgTablet");
+  const bgDesktop = el.data("bgDesktop");
 
-  const isMobile = function() {
+  const _isMobile = function() {
     return window.innerWidth < 768;
   };
 
-  const isTablet = function() {
+  const _isTablet = function() {
     return window.innerWidth >= 768 && window.innerWidth < 1200;
   };
 
-  const heroBg = isMobile() ? heroBgMobile : isTablet() ? heroBgTablet : heroBgDesktop;
-  heroHome.css("background-image", "url(" + heroBg + ")");
+  const heroBg = _isMobile() ? bgMobile : _isTablet() ? bgTablet : bgDesktop;
+  el.css("background-image", "url(" + heroBg + ")");
 };
 
 /**
@@ -189,7 +188,6 @@ function handleMobileMenu() {
     timeline.reverse();
   });
 
-  _logoShapeAnimation();
   _hoverAnimation();
 }
 
@@ -199,10 +197,10 @@ function handleMobileMenu() {
 
 $(window).ready(function() {
   initSlider();
-  setHeroHomeBg();
+  setbackgroundImageByViewport("#hero-home");
   handleMobileMenu();
 });
 
 $(window).resize(function() {
-  setHeroHomeBg();
+  setbackgroundImageByViewport("#hero-home");
 });

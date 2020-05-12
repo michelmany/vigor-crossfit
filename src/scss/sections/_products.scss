@@ -25,12 +25,12 @@
     margin-top: 30px;
 
     @media (min-width: 768px) {
-      margin-top: 0;
+      display: flex;
+      justify-content: space-between;
     }
 
     @media (min-width: 992px) {
-      display: flex;
-      justify-content: space-between;
+      margin-top: 0;
     }
 
     .product {
@@ -43,9 +43,8 @@
       }
 
       @media (min-width: 768px) {
-        width: 39.6rem;
-        height: 39.6rem;
-        margin-bottom: 0;
+        width: calc(100% / 2 - 10px);
+        margin-bottom: 0 !important;
       }
 
       &__header {

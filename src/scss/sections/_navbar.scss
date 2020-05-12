@@ -12,6 +12,7 @@
     position: relative;
     top: -6px;
     left: 2px;
+    z-index: 9999;
     img {
       width: 11.9rem;
     }
@@ -171,7 +172,7 @@
           display: block;
           height: 100%;
           width: 1px;
-          background: rgba($black, 0);
+          background: transparent;
           z-index: 2;
         }
       }
