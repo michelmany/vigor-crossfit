@@ -1,0 +1,40 @@
+.hero-pages {
+  height: 45rem;
+  position: relative;
+  background: #242d2a center / cover no-repeat;
+
+  &__content {
+    position: absolute;
+    bottom: 10%;
+
+    &-headline {
+      position: relative;
+      @extend %font-bold-italic;
+      color: $main-color;
+      text-transform: uppercase;
+      left: 1px;
+      top: -2px;
+      font-size: 8rem;
+      line-height: 7.2rem;
+      letter-spacing: -0.555rem;
+      margin-bottom: 0;
+
+      @media (min-width: 768px) {
+        font-size: 8rem;
+        line-height: 10.2rem;
+      }
+    }
+
+    &-subline {
+      @extend %font-semibold;
+      font-size: 2rem;
+      line-height: 3rem;
+      color: $white;
+
+      @media (min-width: 768px) {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+    }
+  }
+}

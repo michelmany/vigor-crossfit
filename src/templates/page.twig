@@ -1,0 +1,27 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<section 
+		id="hero-home" 
+		class="hero-pages" 
+		data-bg-mobile="{{ theme.link }}/src/images/hero-bg-mobile-min.jpg" 
+		data-bg-tablet="{{ theme.link }}/src/images/hero-bg-tablet-min.jpg" 
+		data-bg-desktop="{{ theme.link }}/src/images/2@2x.jpg" 
+		style="background-image: url('')">
+		<div class="container">
+			<div class="hero-pages__content">
+				<h2 class="hero-pages__content-headline">{{ post.title }}</h2>
+				<h3 class="hero-pages__content-subline">Strenght, vigor and discipline. All in one spot.
+					<br/>Become a part of movement.</h3>
+			</div>
+		</div>
+	</section>
+
+  <section class="intro-section">
+    <div class="container">
+      {{ post.content }}
+    </div>
+  </section>
+
+  {% endblock %}

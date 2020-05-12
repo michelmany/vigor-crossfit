@@ -1,28 +1,42 @@
 .our-plans {
   background: $white;
-  padding-top: 8.4rem;
-  padding-bottom: 8.4rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @media (min-width: 768px) {
+    padding-top: 8.4rem;
+    padding-bottom: 8.4rem;
+  }
 
   &__headline {
     margin-bottom: 8.4rem;
   }
 
   &__boxes {
-    display: flex;
     align-items: center;
+    @media (min-width: 768px) {
+      display: flex;
+    }
 
     .boxes__item {
-      padding: 2.9rem 6.7rem 2.4rem 5rem;
+      padding: 2.9rem 3rem 2.4rem 3rem;
       background: $white;
       border: 1px solid rgba(151, 151, 151, 0.2);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 52.8rem;
-      width: calc((100% / 3));
-      max-width: 436px;
       position: relative;
       z-index: 0;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        width: calc((100% / 3));
+      }
+
+      @media (min-width: 1200px) {
+        padding: 2.9rem 6.7rem 2.4rem 5rem;
+      }
 
       &-title {
         @extend %font-semibold;
@@ -36,9 +50,16 @@
       ul {
         li {
           @extend %font-regular;
-          font-size: 2rem;
+          font-size: 1.8rem;
           color: $black;
           line-height: 3.6rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          @media (min-width: 1200px) {
+            font-size: 2rem;
+          }
         }
       }
 
@@ -51,16 +72,23 @@
       }
 
       &--featured {
-        padding: 3rem 8.7rem 3.6rem 7rem;
+        position: relative;
+        padding: 3rem 3rem 3.6rem 3rem;
         border: 0;
         box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
-        width: 100%;
         height: 55.2rem;
-        width: calc((100% / 3) + 4rem);
-        position: relative;
+        width: 100%;
         z-index: 1;
         margin-left: -1px;
         margin-right: -1px;
+
+        @media (min-width: 768px) {
+          width: calc((100% / 3) + 4rem);
+        }
+
+        @media (min-width: 1200px) {
+          padding: 3rem 8.7rem 3.6rem 7rem;
+        }
 
         .boxes__item-title {
           margin-bottom: 5.2rem;
@@ -76,11 +104,8 @@
       }
 
       &--competitive {
-        .boxes__item-cta {
-          button {
-            text-transform: uppercase;
-            left: 1rem;
-          }
+        @media (min-width: 1200px) {
+          padding-left: 6rem;
         }
       }
     }

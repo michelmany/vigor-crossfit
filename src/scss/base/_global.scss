@@ -1,8 +1,18 @@
 html {
-  font-size: 50%;
+  font-size: 40%;
+
+  @media (min-width: 375px) {
+    font-size: 50%;
+  }
 
   @media (min-width: 992px) {
     font-size: 62.5%;
+  }
+
+  &.menu-open {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
   }
 }
 
@@ -15,6 +25,12 @@ body {
   background: $white;
   overflow-x: hidden;
   @extend %font-regular;
+
+  &.menu-open {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 .btn:focus,
@@ -40,14 +56,17 @@ h1 {
 }
 
 h2 {
-  color: $black;
-  font-size: 5.9rem;
-  letter-spacing: 0;
-  line-height: 36px;
   @extend %font-bold-italic;
+  color: $black;
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: 0;
+  letter-spacing: -0.295rem;
 
-  letter-spacing: -2.95px;
-  line-height: 6rem;
+  @media (min-width: 768px) {
+    font-size: 5.9rem;
+    line-height: 6rem;
+  }
 }
 
 p {

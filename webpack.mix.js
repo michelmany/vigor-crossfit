@@ -18,6 +18,12 @@ mix
     reload: false,
   })
 
+  .disableSuccessNotifications()
+
+  .options({
+    processCssUrls: true,
+  })
+
   .webpackConfig((webpack) => {
     return {
       plugins: [

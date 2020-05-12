@@ -71,3 +71,5 @@ class StarterSite extends Site
  * Enqueue scripts and styles.
  */
 require_once get_template_directory() . '/inc/enqueue-scripts-styles.php';
+
+add_filter('show_admin_bar', '__return_false');

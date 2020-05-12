@@ -1,9 +1,14 @@
 .subscribe {
   background-color: $main-color;
-  min-height: 40.8rem;
-  padding-top: 8.4rem;
-  padding-bottom: 5rem;
   text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+
+  @media (min-width: 768px) {
+    min-height: 40.8rem;
+    padding-top: 8.4rem;
+    padding-bottom: 5rem;
+  }
 
   &__headline {
     margin-bottom: 22px;
@@ -20,7 +25,10 @@
   &__form {
     display: flex;
     margin: 5rem auto 2rem;
-    max-width: 74.6rem;
+
+    @media (min-width: 768px) {
+      max-width: 74.6rem;
+    }
 
     &-input {
       -ms-transform: skewX(-10deg);
@@ -29,8 +37,12 @@
       border: 0;
       height: 6rem;
       background-color: $white;
-      width: 45rem;
+      width: 25rem;
       outline: none;
+
+      @media (min-width: 768px) {
+        width: 45rem;
+      }
 
       input {
         @extend %font-regular;
@@ -40,7 +52,11 @@
         -ms-transform: skewX(10deg);
         -webkit-transform: skewX(10deg);
         transform: skewX(10deg);
-        padding: 0.3rem 3.4rem 0.6rem;
+        padding: 0.3rem 2rem 0.6rem;
+
+        @media (min-width: 768px) {
+          padding: 0.3rem 3.4rem 0.6rem;
+        }
 
         @include placeholder {
           @extend %font-regular;
@@ -51,8 +67,13 @@
     }
 
     &-submit {
-      width: 100%;
-      margin-left: 1.6rem;
+      width: calc(100% - 27rem);
+      margin-left: 1rem;
+
+      @media (min-width: 768px) {
+        margin-left: 1.6rem;
+        width: 100%;
+      }
 
       button {
         color: $black;
@@ -66,10 +87,14 @@
 
   &__bottom-copy {
     @extend %font-regular;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: $black;
     text-align: center;
     line-height: 2.4rem;
     margin-bottom: 0;
+
+    @media (min-width: 768px) {
+      font-size: 1.2rem;
+    }
   }
 }

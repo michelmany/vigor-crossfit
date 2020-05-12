@@ -1,11 +1,13 @@
 .coaches-slider {
-  background: #191a1b center / cover no-repeat;
-  min-height: 73.2rem;
   position: relative;
 
   &__header {
-    position: relative;
+    position: absolute;
     top: 4.4rem;
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 
     &-headline {
       color: $white;
@@ -33,28 +35,103 @@
   }
 
   &__slides {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 10.5rem;
+    position: relative;
+    margin-bottom: 0 !important;
     text-align: center;
 
-    .slides-item {
-      &__title {
-        @extend %font-bold;
-        font-size: 2rem;
-        line-height: 2.7rem;
-        color: $white;
-        text-align: center;
-        margin-bottom: 1.2rem;
-      }
+    &-item {
+      min-height: 73.2rem;
+      background: #191a1b center / cover no-repeat;
+      position: relative;
 
-      &__copy {
-        @extend %font-regular;
-        font-size: 1.6rem;
-        color: $white;
-        text-align: center;
-        line-height: 2.4rem;
+      .slides-item {
+        &__content {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 10.5rem;
+          text-align: center;
+          width: 100%;
+        }
+
+        &__title {
+          @extend %font-bold;
+          font-size: 2rem;
+          line-height: 2.7rem;
+          color: $white;
+          text-align: center;
+          margin-bottom: 1.2rem;
+        }
+
+        &__copy {
+          @extend %font-regular;
+          font-size: 1.6rem;
+          color: $white;
+          text-align: center;
+          line-height: 2.4rem;
+        }
+      }
+    }
+  }
+
+  .slides-item__arrows {
+    @extend .container;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .slick-arrow {
+      padding: 30px;
+      background: transparent center / cover no-repeat;
+      background-size: 2.3rem 4.2rem;
+      cursor: pointer;
+    }
+
+    .slick-arrow--prev {
+      background-image: url("#{$theme_url}/src/images/icon-arrow-L.png");
+      transform: rotate(180deg);
+    }
+    .slick-arrow--next {
+      background-image: url("#{$theme_url}/src/images/icon-arrow-L.png");
+    }
+  }
+
+  .slides-item__dots {
+    width: 300px;
+    height: 20px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .slick-dots {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin-bottom: 0;
+
+      li {
+        padding: 0 10px;
+        cursor: pointer;
+
+        &.slick-active {
+          .dot {
+            background-color: $white;
+          }
+        }
+
+        .dot {
+          height: 8px;
+          width: 8px;
+          background-color: rgba($white, 0.3);
+          border-radius: 50%;
+          display: inline-block;
+        }
       }
     }
   }

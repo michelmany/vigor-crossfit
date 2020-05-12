@@ -14,22 +14,31 @@
 
   &.btn-lg {
     padding: 2.2rem 6.4rem;
+
     &:before {
       max-width: 29.2rem;
     }
   }
 
   &.btn-md {
-    padding: 1.6rem 6.4rem;
+    padding: 1.6rem 4rem;
+
+    @media (min-width: 992px) {
+      padding: 1.6rem 6.4rem;
+    }
+
     &:before {
       max-width: 23rem;
     }
   }
 
   &.btn-sm {
-    padding: 2.2rem 6.4rem;
+    padding: 0.85rem 2.2rem;
+    font-size: 1.12rem;
+    line-height: 1.68rem;
+
     &:before {
-      max-width: 29.2rem;
+      max-width: 10.5rem;
     }
   }
 
@@ -79,7 +88,12 @@
   z-index: 0;
 
   &.btn-lg {
-    padding: 2.2rem 5.84rem;
+    padding: 2.2rem 2.44rem;
+
+    @media (min-width: 992px) {
+      padding: 2.2rem 5.84rem;
+    }
+
     &:before {
       max-width: 29.2rem;
     }
@@ -141,6 +155,7 @@
   &:focus {
     color: $main-color;
     text-decoration: none;
+
     &:before {
       width: 100%;
     }

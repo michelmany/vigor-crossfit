@@ -5,10 +5,10 @@ function enqueue_scripts_styles() {
     $the_theme = wp_get_theme();
     $version = $the_theme->get( 'Version' );
 
-    wp_enqueue_style( 
-      'google-font', 
+    wp_enqueue_style(
+      'google-font',
       'https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap',
-      array(),
+      array()
     );
 
     wp_enqueue_style( 
@@ -23,14 +23,6 @@ function enqueue_scripts_styles() {
       get_template_directory_uri() . '/dist/css/app.css', 
       array('bootstrap-css', 'google-font'),
       $version
-    );
-
-    wp_enqueue_script( 
-      'wpstarter-main-scripts', 
-      get_template_directory_uri() . '/dist/js/app.js', 
-      array( 'jquery' ), 
-      $version, 
-      true 
     );
 
     wp_enqueue_script( 
@@ -50,12 +42,28 @@ function enqueue_scripts_styles() {
     );
 
     wp_enqueue_script( 
+      'gsap', 
+      'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js', 
+      array( 'jquery'), 
+      $version, 
+      true 
+    );
+
+    wp_enqueue_script( 
       'google-maps', 
       'https://maps.googleapis.com/maps/api/js?key=AIzaSyBNrxG0nael-8Qf9cxb_operUdT1dA8hfg&callback=initMap', 
       array('wpstarter-main-scripts'),
       $version, 
       true
     );
+
+    wp_enqueue_script( 
+      'wpstarter-main-scripts', 
+      get_template_directory_uri() . '/dist/js/app.js', 
+      array( 'jquery' ), 
+      $version, 
+      true 
+    );    
 
     $translation_array = array( 'theme_path' => get_stylesheet_directory_uri() );
     wp_localize_script( 'wpstarter-main-scripts', 'theme_vars', $translation_array );

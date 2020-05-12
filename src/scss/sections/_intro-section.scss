@@ -8,9 +8,15 @@
   }
 
   &__headline {
-    max-width: 46rem;
     position: relative;
     top: 1rem;
+    margin-bottom: 4.5rem;
+    max-width: 90%;
+
+    @media (min-width: 768px) {
+      max-width: 46rem;
+      margin-bottom: 0;
+    }
   }
 
   &__copy {
