@@ -178,6 +178,7 @@ function handleMobileMenu() {
   }
 
   menuTrigger.on("click", function() {
+    $(".menu").css("visibility", "visible");
     $("body, html").addClass("menu-open");
     timeline.play();
   });
@@ -186,10 +187,36 @@ function handleMobileMenu() {
     $("body, html").removeClass("menu-open");
     timeline.timeScale(1.25);
     timeline.reverse();
+    setTimeout(() => {
+      $(".menu").css("visibility", "hidden");
+    }, 2000);
   });
 
   _hoverAnimation();
 }
+
+/**
+ * Add to cart
+ */
+
+const handleAddToCart = function() {
+  var isClicked = false;
+
+  $(".btn-add-to-cart").click(function(e) {
+    e.preventDefault();
+
+    if (isClicked === false) {
+      $(this).html("Go to cart");
+      $(this).attr("href", "/cart");
+      isClicked = true;
+      return;
+    }
+
+    window.location = "/cart";
+
+    console.log(e.target);
+  });
+};
 
 /**
  * INIT JS
@@ -199,6 +226,7 @@ $(window).ready(function() {
   initSlider();
   setbackgroundImageByViewport("#hero-home");
   handleMobileMenu();
+  handleAddToCart();
 });
 
 $(window).resize(function() {

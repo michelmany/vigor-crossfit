@@ -1,7 +1,11 @@
 .hero-pages {
-  height: 45rem;
   position: relative;
   background: #242d2a center / cover no-repeat;
+  height: 25rem;
+
+  @media (min-width: 768px) {
+    height: 45rem;
+  }
 
   &__content {
     position: absolute;
@@ -14,7 +18,7 @@
       text-transform: uppercase;
       left: 1px;
       top: -2px;
-      font-size: 8rem;
+      font-size: 5rem;
       line-height: 7.2rem;
       letter-spacing: -0.555rem;
       margin-bottom: 0;

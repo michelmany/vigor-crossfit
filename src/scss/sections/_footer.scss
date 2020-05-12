@@ -12,7 +12,7 @@
     height: auto;
     position: relative;
     margin-bottom: 35px;
-    max-width: 15rem;
+    max-width: 15rem !important;
 
     @media (min-width: 768px) {
       margin-bottom: 0;
